@@ -1,13 +1,11 @@
-import os
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
 
 def load_data():
-    path = os.getcwd()
-    file = '\\token_count.csv'
-    file_p = path + file
-    df = pd.read_csv(file_p,
+    file = 'token_count.csv'
+    
+    df = pd.read_csv(file,
                      dtype={'token':'object', 'count':'int64'},
                      encoding='utf-8')
     return df
